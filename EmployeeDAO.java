@@ -1,12 +1,15 @@
-package com.del.entity;
-import com.del.entity.Employee;
-import java.sql.*;
+package com.del.second.entity;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
+
+import com.del.second.entity.Employee;
 
 public class EmployeeDAO 
 {
+
 	public boolean insertEmployee(Employee emp)
 	{
 		int count=0;
@@ -177,4 +180,3 @@ public ArrayList<Employee>getEmployee()
 	return elist;
 }
 }
-

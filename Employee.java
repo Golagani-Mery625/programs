@@ -1,7 +1,8 @@
-package com.del.entity;
+package com.del.second.entity;
+
 import java.sql.Date;
 
-public class Employee
+public class Employee 
 {
 	int eno;
 	String name;
@@ -18,7 +19,7 @@ public class Employee
 	/**
 	 * @param eno 
 	 */
-	public void setEmpid(int empno, int eno) {
+	public void setEmpid( int eno) {
 		this.eno = eno;
 	}
 	/**
@@ -58,4 +59,6 @@ public class Employee
 		this.doj = doj;
 	}
 
+
+	
 }
