@@ -1,64 +1,56 @@
-package com.del.second.entity;
-
+package com.deloitte.firstmvn.hibfirst.entity;
 import java.sql.Date;
 
-public class Employee 
-{
-	int eno;
-	String name;
-	double salary;
-	Date doj;
-	public Employee(){}
-	public Employee(int eno,String name,double salary,Date doj)
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="employee")
+public class Employee
 	{
-		this.eno=eno; this.name=name; this.salary=salary; this.doj=doj;
-	}
-	public int getEmpid() {
-		return eno;
-	}
-	/**
-	 * @param eno 
-	 */
-	public void setEmpid( int eno) {
-		this.eno = eno;
-	}
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-	/**
-	 * @return the salary
-	 */
-	public double getSalary() {
-		return salary;
-	}
-	/**
-	 * @param salary the salary to set
-	 */
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
-	/**
-	 * @return the doj
-	 */
-	public Date getDoj() {
-		return doj;
-	}
-	/**
-	 * @param doj the doj to set
-	 */
-	public void setDoj(Date doj) {
-		this.doj = doj;
-	}
+	    @Id
+		int eno;
+	    @Column(name="ename")
+		String name;
+	    @Column(name="sal")
+		double salary;
+		Date doj;
+		public Employee(){}
+		public Employee(int eno,String name,double salary,Date doj)
+		{
+			this.eno=eno; this.name=name; this.salary=salary; this.doj=doj;
+		}
+		public int getEmpid() {
+			return eno;
+		}
+		
+		public void setEmpid(int empno, int eno) {
+			this.eno = eno;
+		}
+		
+		public String getName() {
+			return name;
+		}
+		
+		public void setName(String name) {
+			this.name = name;
+		}
+		
+		public double getSalary() {
+			return salary;
+		}
+		
+		public void setSalary(double salary) {
+			this.salary = salary;
+		}
+		
+		public Date getDoj() {
+			return doj;
+		}
+		
+		public void setDoj(Date doj) {
+			this.doj = doj;
+		}
 
-
-	
-}
+	}
