@@ -1,66 +1,72 @@
-package com.del.courses.entity;
-
+package com.deloitte.thirdmvn.hibthird.entity;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.JoinColumn;
+@Entity
 public class Courses 
 {
-	int course_id;
-	String course_name;
-	int course_duration;
-	double course_fee;
-   public Courses(){}
-   public Courses(int course_id,String course_name,int course_duration,double course_fee)
-   {
-	   this.course_id=course_id;
-	   this.course_name=course_name;
-	   this.course_duration=course_duration;
-	   this.course_fee=course_fee;
-   }
+  @Id
+  int cid;
+  String cname;
+  int duration;
+  @ManyToMany
+  @JoinTable(name=" students_courses_reg",joinColumns={@JoinColumn(name="cid")},inverseJoinColumns={@JoinColumn(name=" sid")})
+  List<Student> slist;
+  public Courses(){}
+  public Courses(int cid,String cname, int duration)
+  {
+	  this.cid=cid;  this.cname=cname;  this.duration=duration;
+  }
 /**
- * @return the course_id
+ * @return the cid
  */
-public int getCourse_id() {
-	return course_id;
+public int getCid() {
+	return cid;
 }
 /**
- * @param course_id the course_id to set
+ * @param cid the cid to set
  */
-public void setCourse_id(int course_id) {
-	this.course_id = course_id;
+public void setCid(int cid) {
+	this.cid = cid;
 }
 /**
- * @return the course_name
+ * @return the cname
  */
-public String getCourse_name() {
-	return course_name;
+public String getCname() {
+	return cname;
 }
 /**
- * @param course_name the course_name to set
+ * @param cname the cname to set
  */
-public void setCourse_name(String course_name) {
-	this.course_name = course_name;
+public void setCname(String cname) {
+	this.cname = cname;
 }
 /**
- * @return the course_duration
+ * @return the duration
  */
-public int getCourse_duration() {
-	return course_duration;
+public int getDuration() {
+	return duration;
 }
 /**
- * @param course_duration the course_duration to set
+ * @param duration the duration to set
  */
-public void setCourse_duration(int course_duration) {
-	this.course_duration = course_duration;
+public void setDuration(int duration) {
+	this.duration = duration;
 }
 /**
- * @return the course_fee
+ * @return the slist
  */
-public double getCourse_fee() {
-	return course_fee;
+public List<Student> getSlist() {
+	return slist;
 }
 /**
- * @param course_fee the course_fee to set
+ * @param slist the slist to set
  */
-public void setCourse_fee(double course_fee) {
-	this.course_fee = course_fee;
+public void setSlist(List<Student> slist) {
+	this.slist = slist;
 }
-   
+  
 }
