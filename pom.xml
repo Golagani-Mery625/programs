@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.deloitte.webmvc</groupId>
-  <artifactId>first</artifactId>
+  <artifactId>eight</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>first Maven Webapp</name>
+  <name>eight Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -23,10 +23,19 @@
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <version>3.0-alpha-1</version>
-      <scope>test</scope>
+      </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId> 
+        <artifactId>spring-orm</artifactId>
+        <version>5.0.0.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate</groupId> 
+        <artifactId>hibernate-core</artifactId>
+        <version>5.0.0.Final</version>
     </dependency>
     </dependencies>
   <build>
-    <finalName>first</finalName>
+    <finalName>eight</finalName>
   </build>
 </project>
